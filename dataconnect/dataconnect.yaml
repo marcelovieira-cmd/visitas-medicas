@@ -1,0 +1,12 @@
+specVersion: "v1"
+serviceId: "visitas-medicas"
+location: "southamerica-east1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "visitas-medicas-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

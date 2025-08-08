@@ -1,0 +1,12 @@
+query ListarUsuarios @auth(level: USER_EMAIL_VERIFIED){
+  usuarios {
+    id
+    nome
+  }
+}
+query BuscarUsuarioPorId ($usuarioId:UUID!) @auth(level: USER_EMAIL_VERIFIED){
+  usuario(id:$usuarioId) {
+    id
+    nome
+  }
+}

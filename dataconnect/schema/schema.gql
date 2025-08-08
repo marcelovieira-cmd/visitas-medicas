@@ -1,0 +1,16 @@
+"""
+Tabela de registro de usuários do sistema
+"""
+type Usuario @table {
+  usuarioId:UUID!
+  nome:String!
+}
+
+"""
+Tabela de registro de funcoes do sistema
+"""
+type Funcao @table {
+  id: UUID!
+  funcaoId: String!
+  nomeFuncao: String!
+}

@@ -1,0 +1,16 @@
+#Insere um novo usuário.
+mutation createUsuario($nome:String) @auth(level: USER_EMAIL_VERIFIED) {
+  usuario_insert(data: {
+    nome:$nome
+  })
+}
+mutation UpsertUser($usuarioId: UUID!, $nome: String!) @auth(level: USER_EMAIL_VERIFIED){
+  usuario_upsert(data: {
+    id:$usuarioId
+    nome:$nome
+  })
+}mutation deleteUsuario($usuarioId: UUID!) @auth(level: USER_EMAIL_VERIFIED) {
+  usuario_delete(key: {
+    id: $usuarioId
+  })
+}
