@@ -14,3 +14,10 @@ mutation UpsertUser($usuarioId: UUID!, $nome: String!) @auth(level: USER_EMAIL_V
     id: $usuarioId
   })
 }
+# Associa uma função a um usuário
+mutation vincularFuncaoUsuario($usuarioId: UUID!, $funcaoId: UUID!) @auth(level: USER_EMAIL_VERIFIED) {
+  funcoesUsuario_insert(data: {
+    usuarioId: $usuarioId,
+    funcaoId: $funcaoId
+  })
+}
