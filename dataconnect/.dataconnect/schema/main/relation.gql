@@ -1,0 +1,111 @@
+extend type Funcao {
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "Funcao", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `Funcao` table.
+  """
+  _count: Int! @fdc_generated(from: "Funcao", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Funcao` table where the `funcaoId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  funcaoId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Funcao.funcaoId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Funcao` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Funcao.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Funcao` table where the `nomeFuncao` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  nomeFuncao_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Funcao.nomeFuncao", purpose: QUERY_COUNT)
+}
+extend type FuncoesUsuario {
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "FuncoesUsuario", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `FuncoesUsuario` table.
+  """
+  _count: Int! @fdc_generated(from: "FuncoesUsuario", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `FuncoesUsuario` table where the `funcaoId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  funcaoId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "FuncoesUsuario.funcaoId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `FuncoesUsuario` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "FuncoesUsuario.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `FuncoesUsuario` table where the `usuarioId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  usuarioId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "FuncoesUsuario.usuarioId", purpose: QUERY_COUNT)
+}
+extend type Usuario {
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "Usuario", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `Usuario` table.
+  """
+  _count: Int! @fdc_generated(from: "Usuario", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Usuario` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Usuario.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Usuario` table where the `nome` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  nome_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Usuario.nome", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Usuario` table where the `usuarioId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  usuarioId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Usuario.usuarioId", purpose: QUERY_COUNT)
+}

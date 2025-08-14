@@ -1,0 +1,161 @@
+extend type Query {
+  """
+  ✨ Look up a single `Funcao` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  funcao(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Funcao_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Funcao_FirstRow
+  ): Funcao @fdc_generated(from: "Funcao", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `FuncoesUsuario` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  funcoesUsuario(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: FuncoesUsuario_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: FuncoesUsuario_FirstRow
+  ): FuncoesUsuario @fdc_generated(from: "FuncoesUsuario", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Usuario` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  usuario(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Usuario_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Usuario_FirstRow
+  ): Usuario @fdc_generated(from: "Usuario", purpose: QUERY_SINGLE)
+  """
+  ✨ List `Funcao` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  funcaos(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Funcao_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Funcao_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Funcao_Having
+  ): [Funcao!]! @fdc_generated(from: "Funcao", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `FuncoesUsuario` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  funcoesUsuarios(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: FuncoesUsuario_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [FuncoesUsuario_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: FuncoesUsuario_Having
+  ): [FuncoesUsuario!]! @fdc_generated(from: "FuncoesUsuario", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Usuario` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  usuarios(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Usuario_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Usuario_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Usuario_Having
+  ): [Usuario!]! @fdc_generated(from: "Usuario", purpose: QUERY_MULTIPLE)
+}

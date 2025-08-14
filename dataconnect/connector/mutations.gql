@@ -1,23 +1,18 @@
-#Insere um novo usuário.
-mutation createUsuario($nome:String) @auth(level: USER_EMAIL_VERIFIED) {
-  usuario_insert(data: {
-    nome:$nome
-  })
+
+
+# Mutations para a tabela Usuario
+
+# Inserir novo usuário
+mutation usuarioInsert($nome: String!) @auth(level: PUBLIC){
+  usuario_insert(data: { nome: $nome })
 }
-mutation UpsertUser($usuarioId: UUID!, $nome: String!) @auth(level: USER_EMAIL_VERIFIED){
-  usuario_upsert(data: {
-    id:$usuarioId
-    nome:$nome
-  })
-}mutation deleteUsuario($usuarioId: UUID!) @auth(level: USER_EMAIL_VERIFIED) {
-  usuario_delete(key: {
-    id: $usuarioId
-  })
+
+# Atualizar usuário existente
+mutation usuarioUpsert($usuarioId: UUID, $nome: String) @auth(level: PUBLIC){
+  usuario_upsert(data: { usuarioId: $usuarioId,nome: $nome })
 }
-# Associa uma função a um usuário
-mutation vincularFuncaoUsuario($usuarioId: UUID!, $funcaoId: UUID!) @auth(level: USER_EMAIL_VERIFIED) {
-  funcoesUsuario_insert(data: {
-    usuarioId: $usuarioId,
-    funcaoId: $funcaoId
-  })
+
+# Deletar usuário
+mutation usuarioDelete($usuarioId: UUID!) @auth(level: PUBLIC){
+  usuario_delete(key: { usuarioId: $usuarioId })
 }

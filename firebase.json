@@ -1,6 +1,9 @@
 {
   "emulators": {
     "dataconnect": {
+      "host": "localhost",
+      "port": 9399,
+      "postgresPort": 5434,
       "dataDir": "dataconnect/.dataconnect/pgliteData"
     }
   },

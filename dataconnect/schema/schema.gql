@@ -1,24 +1,27 @@
 """
 Tabela de registro de usuários do sistema
 """
-type Usuario @table {
-  usuarioId: UUID!
+#type Usuario @table {
+#  id: UUID!
+#  nome: String
+#}
+
+type Usuario @table(name: "USUARIO", key: "usuarioId") {
+  usuarioId: UUID! @default(expr: "uuidV4()")   # PK (definida em @table.key), gerada no servidor
   nome: String!
 }
-
 """
 Tabela de registro de funções do sistema
 """
-type Funcao @table {
-  id: UUID!
-  funcaoId: String!
+type Funcao @table (name:"FUNCAO", key:"funcaoId"){
+  funcaoId: UUID! @default(expr: "uuidV4()")
   nomeFuncao: String!
 }
 
 """
 Tabela de associação entre usuários e funções
 """
-type FuncoesUsuario @table {
-  usuarioId: UUID!
-  funcaoId: UUID!
+type UsuarioFuncao @table(name: "USUARIO_FUNCAO", key: ["usuarioId", "funcaoId"]) {
+  usuarioId: Usuario!
+  funcaoId: Funcao!
 }

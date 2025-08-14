@@ -1,34 +1,15 @@
-query ListarUsuarios @auth(level: USER_EMAIL_VERIFIED){
+
+# Query para listar todos os usuários
+query listarUsuarios @auth(level: PUBLIC) {
   usuarios {
-    id
+    usuarioId
     nome
   }
 }
-
-query ListarFuncoes @auth(level: USER_EMAIL_VERIFIED){
-  funcaos{
-    funcaoId
-    nomeFuncao
-  }
-}
-
-query BuscarUsuarioPorId ($usuarioId:UUID!) @auth(level: USER_EMAIL_VERIFIED){
-  usuario(id:$usuarioId) {
-    id
+# Query para listar todos os usuários
+query buscarUsuarioPorId($usuarioId: UUID!) @auth(level: PUBLIC) {
+  usuario(key: { usuarioId: $usuarioId }) {
+    usuarioId
     nome
-  }
-}
-
-query ListarFuncaoPorId($funcaoId:UUID) @auth(level: USER_EMAIL_VERIFIED){
-  funcao(id:$funcaoId){
-    funcaoId
-    nomeFuncao
-  }
-}
-
-query ListarPerfisDoUsuario($usuarioId: UUID!) @auth(level: USER_EMAIL_VERIFIED) {
-  funcoesUsuario(id: $usuarioId) {
-      usuarioId
-      funcaoId  
   }
 }

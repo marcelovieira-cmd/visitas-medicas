@@ -1,0 +1,18 @@
+extend type Funcao {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Funcao", purpose: IMPLICIT_KEY_FIELD)
+}
+extend type FuncoesUsuario {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "FuncoesUsuario", purpose: IMPLICIT_KEY_FIELD)
+}
+extend type Usuario {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Usuario", purpose: IMPLICIT_KEY_FIELD)
+}

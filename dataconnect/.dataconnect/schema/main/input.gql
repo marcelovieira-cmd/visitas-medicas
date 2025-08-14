@@ -1,0 +1,519 @@
+"""
+✨ `Funcao_KeyOutput` returns the primary key fields of table type `Funcao`.
+
+It has the same format as `Funcao_Key`, but is only used as mutation return value.
+"""
+scalar Funcao_KeyOutput
+"""
+✨ `FuncoesUsuario_KeyOutput` returns the primary key fields of table type `FuncoesUsuario`.
+
+It has the same format as `FuncoesUsuario_Key`, but is only used as mutation return value.
+"""
+scalar FuncoesUsuario_KeyOutput
+"""
+✨ `Usuario_KeyOutput` returns the primary key fields of table type `Usuario`.
+
+It has the same format as `Usuario_Key`, but is only used as mutation return value.
+"""
+scalar Usuario_KeyOutput
+"""
+✨ Generated data input type for table 'Funcao'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Funcao_Data {
+  """
+  ✨ Generated from Field `Funcao`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Funcao`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Funcao`.`funcaoId` of type `UUID`
+  """
+  funcaoId: UUID
+  """
+  ✨ `_expr` server value variant of `funcaoId` (✨ Generated from Field `Funcao`.`funcaoId` of type `UUID`)
+  """
+  funcaoId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Funcao`.`nomeFuncao` of type `String`
+  """
+  nomeFuncao: String
+  """
+  ✨ `_expr` server value variant of `nomeFuncao` (✨ Generated from Field `Funcao`.`nomeFuncao` of type `String`)
+  """
+  nomeFuncao_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Funcao'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Funcao_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Funcao_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Funcao_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Funcao_Filter!]
+  """
+  ✨ Generated from Field `Funcao`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Funcao`.`funcaoId` of type `UUID`
+  """
+  funcaoId: UUID_Filter
+  """
+  ✨ Generated from Field `Funcao`.`nomeFuncao` of type `String`
+  """
+  nomeFuncao: String_Filter
+}
+"""
+✨ Generated first-row input type for table 'Funcao'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Funcao_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Funcao_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Funcao_Filter
+}
+"""
+✨ Generated having input type for table 'Funcao'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Funcao_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Funcao_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Funcao_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Funcao_Having!]
+  """
+  ✨ Generated from Field `Funcao`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Funcao`.`funcaoId_count` of type `Int!`
+  """
+  funcaoId_count: Int_Filter
+  """
+  ✨ Generated from Field `Funcao`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Funcao`.`nomeFuncao_count` of type `Int!`
+  """
+  nomeFuncao_count: Int_Filter
+}
+"""
+✨ Generated key input type for table 'Funcao'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Funcao_Key {
+  """
+  ✨ Generated from Field `Funcao`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Funcao`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Funcao'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Funcao_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Funcao_Filter
+}
+"""
+✨ Generated order input type for table 'Funcao'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Funcao_Order {
+  """
+  ✨ Generated from Field `Funcao`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Funcao`.`funcaoId` of type `UUID`
+  """
+  funcaoId: OrderDirection
+  """
+  ✨ Generated from Field `Funcao`.`nomeFuncao` of type `String`
+  """
+  nomeFuncao: OrderDirection
+  """
+  ✨ Generated from Field `Funcao`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Funcao`.`funcaoId_count` of type `Int!`
+  """
+  funcaoId_count: OrderDirection
+  """
+  ✨ Generated from Field `Funcao`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Funcao`.`nomeFuncao_count` of type `Int!`
+  """
+  nomeFuncao_count: OrderDirection
+}
+"""
+✨ Generated data input type for table 'FuncoesUsuario'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input FuncoesUsuario_Data {
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `FuncoesUsuario`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`funcaoId` of type `UUID`
+  """
+  funcaoId: UUID
+  """
+  ✨ `_expr` server value variant of `funcaoId` (✨ Generated from Field `FuncoesUsuario`.`funcaoId` of type `UUID`)
+  """
+  funcaoId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`usuarioId` of type `UUID`
+  """
+  usuarioId: UUID
+  """
+  ✨ `_expr` server value variant of `usuarioId` (✨ Generated from Field `FuncoesUsuario`.`usuarioId` of type `UUID`)
+  """
+  usuarioId_expr: UUID_Expr
+}
+"""
+✨ Generated filter input type for table 'FuncoesUsuario'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input FuncoesUsuario_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [FuncoesUsuario_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: FuncoesUsuario_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [FuncoesUsuario_Filter!]
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`funcaoId` of type `UUID`
+  """
+  funcaoId: UUID_Filter
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`usuarioId` of type `UUID`
+  """
+  usuarioId: UUID_Filter
+}
+"""
+✨ Generated first-row input type for table 'FuncoesUsuario'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input FuncoesUsuario_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [FuncoesUsuario_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: FuncoesUsuario_Filter
+}
+"""
+✨ Generated having input type for table 'FuncoesUsuario'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input FuncoesUsuario_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [FuncoesUsuario_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: FuncoesUsuario_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [FuncoesUsuario_Having!]
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`funcaoId_count` of type `Int!`
+  """
+  funcaoId_count: Int_Filter
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`usuarioId_count` of type `Int!`
+  """
+  usuarioId_count: Int_Filter
+}
+"""
+✨ Generated key input type for table 'FuncoesUsuario'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input FuncoesUsuario_Key {
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `FuncoesUsuario`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'FuncoesUsuario'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input FuncoesUsuario_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: FuncoesUsuario_Filter
+}
+"""
+✨ Generated order input type for table 'FuncoesUsuario'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input FuncoesUsuario_Order {
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`funcaoId` of type `UUID`
+  """
+  funcaoId: OrderDirection
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`usuarioId` of type `UUID`
+  """
+  usuarioId: OrderDirection
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`funcaoId_count` of type `Int!`
+  """
+  funcaoId_count: OrderDirection
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `FuncoesUsuario`.`usuarioId_count` of type `Int!`
+  """
+  usuarioId_count: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Usuario'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Usuario_Data {
+  """
+  ✨ Generated from Field `Usuario`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Usuario`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Usuario`.`nome` of type `String`
+  """
+  nome: String
+  """
+  ✨ `_expr` server value variant of `nome` (✨ Generated from Field `Usuario`.`nome` of type `String`)
+  """
+  nome_expr: String_Expr
+  """
+  ✨ Generated from Field `Usuario`.`usuarioId` of type `UUID`
+  """
+  usuarioId: UUID
+  """
+  ✨ `_expr` server value variant of `usuarioId` (✨ Generated from Field `Usuario`.`usuarioId` of type `UUID`)
+  """
+  usuarioId_expr: UUID_Expr
+}
+"""
+✨ Generated filter input type for table 'Usuario'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Usuario_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Usuario_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Usuario_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Usuario_Filter!]
+  """
+  ✨ Generated from Field `Usuario`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Usuario`.`nome` of type `String`
+  """
+  nome: String_Filter
+  """
+  ✨ Generated from Field `Usuario`.`usuarioId` of type `UUID`
+  """
+  usuarioId: UUID_Filter
+}
+"""
+✨ Generated first-row input type for table 'Usuario'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Usuario_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Usuario_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Usuario_Filter
+}
+"""
+✨ Generated having input type for table 'Usuario'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Usuario_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Usuario_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Usuario_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Usuario_Having!]
+  """
+  ✨ Generated from Field `Usuario`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Usuario`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Usuario`.`nome_count` of type `Int!`
+  """
+  nome_count: Int_Filter
+  """
+  ✨ Generated from Field `Usuario`.`usuarioId_count` of type `Int!`
+  """
+  usuarioId_count: Int_Filter
+}
+"""
+✨ Generated key input type for table 'Usuario'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Usuario_Key {
+  """
+  ✨ Generated from Field `Usuario`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Usuario`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Usuario'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Usuario_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Usuario_Filter
+}
+"""
+✨ Generated order input type for table 'Usuario'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Usuario_Order {
+  """
+  ✨ Generated from Field `Usuario`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Usuario`.`nome` of type `String`
+  """
+  nome: OrderDirection
+  """
+  ✨ Generated from Field `Usuario`.`usuarioId` of type `UUID`
+  """
+  usuarioId: OrderDirection
+  """
+  ✨ Generated from Field `Usuario`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Usuario`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Usuario`.`nome_count` of type `Int!`
+  """
+  nome_count: OrderDirection
+  """
+  ✨ Generated from Field `Usuario`.`usuarioId_count` of type `Int!`
+  """
+  usuarioId_count: OrderDirection
+}

@@ -1,0 +1,338 @@
+extend type Mutation {
+  """
+  ✨ Insert a single `Funcao` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  funcao_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Funcao_Data!
+  ): Funcao_KeyOutput! @fdc_generated(from: "Funcao", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `FuncoesUsuario` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  funcoesUsuario_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: FuncoesUsuario_Data!
+  ): FuncoesUsuario_KeyOutput! @fdc_generated(from: "FuncoesUsuario", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Usuario` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  usuario_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Usuario_Data!
+  ): Usuario_KeyOutput! @fdc_generated(from: "Usuario", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert `Funcao` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  funcao_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Funcao_Data!]!
+  ): [Funcao_KeyOutput!]! @fdc_generated(from: "Funcao", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `FuncoesUsuario` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  funcoesUsuario_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [FuncoesUsuario_Data!]!
+  ): [FuncoesUsuario_KeyOutput!]! @fdc_generated(from: "FuncoesUsuario", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Usuario` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  usuario_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Usuario_Data!]!
+  ): [Usuario_KeyOutput!]! @fdc_generated(from: "Usuario", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert or update a single `Funcao` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Funcao`.
+  """
+  funcao_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Funcao_Data!
+  ): Funcao_KeyOutput! @fdc_generated(from: "Funcao", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `FuncoesUsuario` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `FuncoesUsuario`.
+  """
+  funcoesUsuario_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: FuncoesUsuario_Data!
+  ): FuncoesUsuario_KeyOutput! @fdc_generated(from: "FuncoesUsuario", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Usuario` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Usuario`.
+  """
+  usuario_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Usuario_Data!
+  ): Usuario_KeyOutput! @fdc_generated(from: "Usuario", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update `Funcao` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Funcao`.
+  """
+  funcao_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Funcao_Data!]!
+  ): [Funcao_KeyOutput!]! @fdc_generated(from: "Funcao", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `FuncoesUsuario` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `FuncoesUsuario`.
+  """
+  funcoesUsuario_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [FuncoesUsuario_Data!]!
+  ): [FuncoesUsuario_KeyOutput!]! @fdc_generated(from: "FuncoesUsuario", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Usuario` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Usuario`.
+  """
+  usuario_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Usuario_Data!]!
+  ): [Usuario_KeyOutput!]! @fdc_generated(from: "Usuario", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Update a single `Funcao` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Funcao` or `null` if not found.
+  """
+  funcao_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Funcao_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Funcao_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Funcao_Data!
+  ): Funcao_KeyOutput @fdc_generated(from: "Funcao", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `FuncoesUsuario` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `FuncoesUsuario` or `null` if not found.
+  """
+  funcoesUsuario_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: FuncoesUsuario_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: FuncoesUsuario_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: FuncoesUsuario_Data!
+  ): FuncoesUsuario_KeyOutput @fdc_generated(from: "FuncoesUsuario", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Usuario` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Usuario` or `null` if not found.
+  """
+  usuario_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Usuario_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Usuario_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Usuario_Data!
+  ): Usuario_KeyOutput @fdc_generated(from: "Usuario", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update `Funcao` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  funcao_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Funcao_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Funcao_Data!
+  ): Int! @fdc_generated(from: "Funcao", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `FuncoesUsuario` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  funcoesUsuario_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: FuncoesUsuario_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: FuncoesUsuario_Data!
+  ): Int! @fdc_generated(from: "FuncoesUsuario", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Usuario` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  usuario_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Usuario_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Usuario_Data!
+  ): Int! @fdc_generated(from: "Usuario", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Delete a single `Funcao` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  funcao_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Funcao_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Funcao_FirstRow
+  ): Funcao_KeyOutput @fdc_generated(from: "Funcao", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `FuncoesUsuario` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  funcoesUsuario_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: FuncoesUsuario_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: FuncoesUsuario_FirstRow
+  ): FuncoesUsuario_KeyOutput @fdc_generated(from: "FuncoesUsuario", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Usuario` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  usuario_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Usuario_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Usuario_FirstRow
+  ): Usuario_KeyOutput @fdc_generated(from: "Usuario", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete `Funcao` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  funcao_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Funcao_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Funcao", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `FuncoesUsuario` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  funcoesUsuario_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: FuncoesUsuario_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "FuncoesUsuario", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Usuario` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  usuario_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Usuario_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Usuario", purpose: DELETE_MULTIPLE)
+}
